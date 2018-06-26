@@ -13,8 +13,7 @@ from config import get_mysql
 def get_content():
     m_cli = pymongo.MongoClient()
     while True:
-        url = r_cli.spop('faileds')
-        print url
+        url = r_cli.spop('domain')
         if not url:
             return
         try:
